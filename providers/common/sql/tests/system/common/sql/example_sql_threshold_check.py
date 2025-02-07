@@ -46,8 +46,8 @@ with DAG(
     """
 
     # [START howto_operator_sql_threshold_check]
-    threshhold_check = SQLThresholdCheckOperator(
-        task_id="threshhold_check",
+    threshold_check = SQLThresholdCheckOperator(
+        task_id="threshold_check",
         conn_id="sales_db",
         sql="SELECT count(distinct(customer_id)) FROM sales;",
         min_threshold=1,
